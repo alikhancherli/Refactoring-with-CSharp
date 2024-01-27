@@ -1,14 +1,10 @@
-﻿namespace Packt.CloudySkiesAir.Chapter2; 
+﻿namespace Packt.CloudySkiesAir.Chapter2;
 
 public class Fee {
   public decimal Total { get; set; }
 
-  public void ChargeCarryOnBaggageFee(decimal fee) {
-    Console.WriteLine($"Carry-on Fee: {fee}");
-    Total += fee;
-  }
-  public void ChargeCheckedBaggageFee(decimal fee) {
-    Console.WriteLine($"Checked Fee: {fee}");
+  public void ChargeBaggageFee(decimal fee, string chargeName) {
+    Console.WriteLine($"{chargeName} Fee: {fee}");
     Total += fee;
   }
 }
